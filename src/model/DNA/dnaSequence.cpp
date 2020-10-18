@@ -44,7 +44,7 @@ DnaSequence::Nucleotide* DnaSequence::initSequence(const char* dnaSequence)const
 DnaSequence::Nucleotide* DnaSequence::getSeqToAssign(const DnaSequence& dnaSequence){
     Nucleotide *new_dna_seq = new Nucleotide[dnaSequence.m_length + 1];
 
-    for(size_t i=0; i<dnaSequence.m_length; i++){
+    for(size_t i=0;  i<dnaSequence.m_length; ++i){
         new_dna_seq[i] = Nucleotide(dnaSequence[i]);
     }
     new_dna_seq[dnaSequence.m_length] = '\0';
